@@ -20,7 +20,7 @@ public class Dashboard extends javax.swing.JFrame {
         setIconImage(icon.getImage());
         
         setLocationRelativeTo(null);
-        setResizable(false);
+        setResizable(true);
         
         setTitle("Student Management System - Dashboard");
         
@@ -45,7 +45,7 @@ public class Dashboard extends javax.swing.JFrame {
     initComponents();
 
     setLocationRelativeTo(null);
-    setResizable(false);
+    setResizable(true);
 
     setTitle("Student Management System - Dashboard");
 

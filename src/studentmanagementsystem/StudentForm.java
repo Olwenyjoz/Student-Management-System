@@ -2,7 +2,7 @@
 package studentmanagementsystem;
 
 import java.sql.Connection;
-import java.sql.DriverManager;
+
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -37,7 +37,7 @@ public class StudentForm extends javax.swing.JFrame {
         studenttable.setSelectionForeground(Color.BLACK);
         
         setLocationRelativeTo(null);
-        setResizable(false);
+        setResizable(true);
 
         myConnection();
         displayStudents();
@@ -625,11 +625,7 @@ public class StudentForm extends javax.swing.JFrame {
 
     try {
 
-        cn = DriverManager.getConnection(
-                "jdbc:mysql://localhost:3306/student_management_system",
-                "root",
-                ""
-        );
+        cn = Database.connect();
 
     } catch (SQLException ex) {
 

@@ -2,7 +2,7 @@
 package studentmanagementsystem;
 
 import java.sql.Connection;
-import java.sql.DriverManager;
+
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -32,7 +32,7 @@ public class Login extends javax.swing.JFrame {
         setIconImage(icon.getImage());
        
         setLocationRelativeTo(null);
-        setResizable(false);
+        setResizable(true);
         
         myConnection();
         
@@ -226,11 +226,7 @@ public class Login extends javax.swing.JFrame {
 
     try {
 
-        cn = DriverManager.getConnection(
-                "jdbc:mysql://localhost:3306/student_management_system",
-                "root",
-                ""
-        );
+        cn = Database.connect();
 
         JOptionPane.showMessageDialog(
                 this,
@@ -245,7 +241,7 @@ public class Login extends javax.swing.JFrame {
                 this,
                 "Failed to connect to the database.\n\n"
                 + "Please check that:\n"
-                + "• XAMPP MySQL is running.\n"
+                + "• MySQL96 is running.\n"
                 + "• The database 'student_management_system' exists.\n"
                 + "• Your connection settings are correct.\n\n"
                 + "Error: " + ex.getMessage(),

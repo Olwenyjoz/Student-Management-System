@@ -14,3 +14,6 @@ dist/
 # Operating system files
 Thumbs.db
 .DS_Store
+
+# Local database credentials
+database.properties

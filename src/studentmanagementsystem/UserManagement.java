@@ -2,7 +2,7 @@
 package studentmanagementsystem;
 
 import java.sql.Connection;
-import java.sql.DriverManager;
+
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -23,7 +23,7 @@ public class UserManagement extends javax.swing.JFrame {
         
         
     setLocationRelativeTo(null);
-    setResizable(false);
+    setResizable(true);
 
     myConnection();
     
@@ -406,10 +406,7 @@ public class UserManagement extends javax.swing.JFrame {
 
     try {
 
-        cn = DriverManager.getConnection(
-                "jdbc:mysql://localhost:3306/student_management_system",
-                "root",
-                "");
+        cn = Database.connect();
 
     } catch (SQLException ex) {
 
